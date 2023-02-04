@@ -172,22 +172,6 @@ textarea{
 
     background-color: var(--white-color);
 }
-.adress-item-mail::before{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/5757/5757765.png);
-    background-size: contain;
-}
-.adress-item-tel::before{
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url(https://imgpng.ru/d/phone_PNG49042.png);
-    background-size: contain;    
-}
 .adress-item-tel,
 .adress-item-mail {
     display: flex;
@@ -738,6 +722,7 @@ padding-left: 0px;
 .footer-input{
     width: 264px;
     height: 40px;
+    color: white;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -752,6 +737,10 @@ padding-left: 0px;
 .footer-button-text{
     width: 77px;
     height: 24px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
 }
 .icon-footer{
     width: 24px;
@@ -791,6 +780,7 @@ padding-left: 0px;
     left: 50%;
     width: 408px;
     min-height: 576px;
+    padding: 72px 24px 24px 24px;
 
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -834,16 +824,10 @@ padding-left: 0px;
 }
 .text-modal{
     color: var(--navy-blue);
-    padding-top: 72px;
     text-align: center;
     margin-bottom: 14px;
 }
 .modal-form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
 }
 /* .form-field{
     position: relative;
@@ -856,16 +840,9 @@ padding-left: 0px;
     border-radius: 4px;
 } */
 .modal-form{
-    position: relative;
-    width: 360px;
-    padding-right: 24px;
-    padding-left: 24px;
-    display: flex;
-    gap: 4px;
-
     border-radius: 4px;
 }
-.modal-form input{
+.input-wrap input{
     width: 100%;
     height: 100%;
 }
@@ -891,21 +868,13 @@ padding-left: 0px;
     gap: 8px;
     
 }
-.modal-checkbox input{
-    border: 1.25px solid var(--navy-blue);
-    border-radius: 2px;
-    width: 16px;
-    height: 16px;
-    border: 1.25px solid var(--navy-blue);
-    border-radius: 2px;
-}
+.checkbox{
+    appearance: none;
 
-.modal-checkbox input:target-within{
-    border: 1.25px solid #404BBF;
-    border-radius: 2px;
 }
 .modal-checkbox label{
-    color: #8E8F99
+    color: #8E8F99;
+    display: flex;
 }
 .modal-send{
     width: 156px;
@@ -913,12 +882,13 @@ padding-left: 0px;
     color: var(--white-color);
     background-color: var(--iris);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    margin: auto;
+    margin: 0 auto;
+    display: block;
     border-radius: 4px;
     border: none;
     transition: background-color 250ms var(--timming);
 
-    margin-bottom: 24px;
+    cursor: pointer;
 }
 .modal-send:hover,
 .modal-send:focus{
@@ -926,16 +896,25 @@ padding-left: 0px;
 }
 
 .form-label{
-    color: #8E8F99;
+    display: block;
+    margin-bottom: 4px;
 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
 }
 
 .input-wrap{
     position: relative;
     width: 360px;
     height: 40px;
+    background-color: #FCFCFC;
 
-    background-color: #FCFCFC;;
+    margin-bottom: 8px;
 }
 .input-wrap:focus-within{
     border-color: var(--iris);
@@ -963,9 +942,35 @@ padding-left: 0px;
 
 }
 .form-textarea{
+    display: block;
     padding: 8px 16px;
     width: 360px;
     height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+}
+.checkbox-link{
+    color: var(--iris);
+}
+.icon-checkbox{
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    border: 1.25px solid var(--navy-blue);
+    border-radius: 2px; 
+    margin-right: 8px;
+}
+.checkbox:checked + .icon-checkbox{
+    width: 16px;
+    height: 16px;
+    border-color: var(--ocean);
+    background-color: var(--ocean);
+    background-image: url(../images/icon/Property\ 1=click\ \(2\).svg);
+    background-size: contain;
+    background-origin: border-box;
+
+}
+.checkbox:focus + .icon-checkbox{
+    border: 2px solid blue;
 }
