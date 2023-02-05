@@ -21,6 +21,7 @@
 input{
     border: none;
 }
+
 ul{
     padding: 0px;
     margin: 0px;
@@ -58,6 +59,7 @@ textarea{
     width: 1158px;
 }
 .head-section{
+    height: 76px;
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -100,9 +102,9 @@ textarea{
 
 .nav-item {
     position: relative;
-
     display: block;
 
+    
     padding-top: 24px;
     padding-bottom: 24px;
     
@@ -115,6 +117,7 @@ textarea{
 }
 .studio{
     color: var(--ocean);
+    height: 76px;
 
 }
 .studio::before{
@@ -125,7 +128,8 @@ textarea{
     width: 48px;
     height: 4px;
 
-    background: #404BBF;
+    background-color: #404BBF;
+    background-origin: border-box;
     border-radius: 2px;
 
     display: block;
@@ -133,6 +137,7 @@ textarea{
 }
 .portfolio{
     color: var(--ocean);
+    height: 76px;
 }
 .portfolio::after{
     position: absolute;
@@ -600,7 +605,7 @@ padding-left: 0px;
 }
 
 .сustomers-title {
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -712,7 +717,8 @@ padding-left: 0px;
 .footer-form{
  
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     gap: 24px;
 }
 .form-field{
@@ -728,7 +734,7 @@ padding-left: 0px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
-    padding: 16px 8px;
+    padding: 8px 16px;
 }
 .footer-label{
     color: var(--white-color);
@@ -930,6 +936,9 @@ padding-left: 0px;
 .input-wrap input::placeholder{
     color: rgba(117, 117, 117, 0.5);
 }
+/* .input-form::focus{
+    border: px solid var(--iris);
+} */
 
 .form-icon{
     position: absolute;
@@ -938,7 +947,6 @@ padding-left: 0px;
     width: 18px;
     height: 24px;
     transform: translateY(-50%);
-
 
 }
 .form-textarea{
@@ -949,6 +957,9 @@ padding-left: 0px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
+/* .form-textarea:focus{
+    border: 1px solid var(--iris);
+} */
 .checkbox-link{
     color: var(--iris);
 }
@@ -971,6 +982,9 @@ padding-left: 0px;
     background-origin: border-box;
 
 }
-.checkbox:focus + .icon-checkbox{
+.checkbox:target + .icon-checkbox{
     border: 2px solid blue;
+}
+.form-modal{
+    margin-bottom: 8px;
 }
